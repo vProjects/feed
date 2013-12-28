@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="path-to-favicon/favicon.png">
+
+    <title>Feed for the community page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.responsive.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic' rel='stylesheet' type='text/css'>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+  <script type="text/javascript">
+      $(document).ready(function(){
+         
+        //increasing the size of textarea
+          
+          $('.commentBox textarea').focus(function() {
+              
+               var activity = $(this).parent().parent();              
+               var activityHeight = activity.height();
+              
+               activity.height(activityHeight);
+              
+              var commentBox = $(this).parent();
+              
+              commentBox.children('textarea').css({'height': '40px',});
+              
+              //showing the buttons      
+              commentBox.children('.commentButton').css({'display':'block',});
+            
+              //showing the image
+              commentBox.children('.Cimage').css({'display':'block',}); 
+               
+          });
+          
+          $('.commentBoxEnlarge textarea').focus(function() {
+              $('.commentBoxEnlarge textarea').css({
+                    'height': '40px',
+              });
+              
+            //removing the dummy box 
+             $('.dummyBox').css({'display':'none'});   
+            
+            //showing the buttons      
+            $('.commentButton').css({'display':'block',});
+            
+            //showing the image
+             $('.Cimage').css({'display':'block',}); 
+               
+          });
+          
+          
+          $('.cancelButton').click(function(){
+              
+              var commentBox = $(this).parent().parent();
+              
+              commentBox.children('textarea').css({'height':'20px',});
+              
+            //removing the dummy box 
+             $('.dummyBox').css({'display':'none'});   
+            
+            //showing the buttons      
+             commentBox.children('.commentButton').css({'display':'none',});
+            
+            //showing the image
+            commentBox.children('.Cimage').css({'display':'none',});
+             
+          });
+          
+          
+          
+          $('.thumbnail img').click(function(){
+              var a = $(this).attr('src');
+              $('.fullscreen img').attr('src',a);
+              $('.upperImage').css({'display':'block',}); 
+              event.preventDefault();
+          });
+          
+          $('.cut').click(function(){
+              $('.upperImage').css({'display':'none',}); 
+          });
+   
+      });
+  </script>
+  </head>
+  
+  <body>
+        <div class="upperImage">
+            <div class="row-fluid picAndCommentHolder">
+                <div class="span8" style="width: 60%;  margin-left: 5%;">
+                    <div class="imageHolder"><a href="#" class="fullscreen"><img src="http://placehold.it/600X600" alt="userImage"></a></div>
+                </div>
+                <!-- fullscreenComment ends here -->
+                <div class="span4 fullscreenComment pull-right" style="margin-left: 0px;">
+                    
+                <div class="activityEnlarge">
+                    <i class="icon-remove cut pull-right"></i>
+                    <div class="comment">
+                        
+                        <a href="#" class="thumbnail commentImage">
+                            <img src="http://placehold.it/40X40" alt="userImage">
+                        </a>
+                        
+                        <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                            <h5>
+                                This is a nice Video :)
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </h5>
+                        </div>
+                        <div class="timeofcommentAndLike">
+                            <h6><a href="#">1 Minute Ago</a></h6>
+                            <h6><a href="#">Like</a></h6>
+                        </div>
+                    </div>
+                    <!-- class comment ends here -->
+                    <div class="comment">
+                        <a href="#" class="thumbnail commentImage">
+                            <img src="http://placehold.it/40X40" alt="userImage">
+                        </a>
+                        
+                        <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                            <h5>
+                                This is a nice Video :)
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
+                            </h5>
+                        </div>
+                        <div class="timeofcommentAndLike">
+                            <h6><a href="#">1 Minute Ago</a></h6>
+                            <h6><a href="#">Like</a></h6>
+                        </div>
+                    </div>
+                    <!-- class comment ends here -->
+                    <div class="comment">
+                        <a href="#" class="thumbnail commentImage">
+                            <img src="http://placehold.it/40X40" alt="userImage">
+                        </a>
+                        
+                        <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                            <h5>
+                                This is a nice Video :)
+                                Lorem Ipsum is simply dummy text.  
+                            </h5>
+                        </div>
+                        <div class="timeofcommentAndLike">
+                            <h6><a href="#">1 Minute Ago</a></h6>
+                            <h6><a href="#">Like</a></h6>
+                        </div>
+                    </div>
+                    <!-- class comment ends here -->
+                     <div class="commentBoxEnlarge">
+                        <div class="dummyBox">
+                            
+                        </div>
+                        <a href="#" class="thumbnail commentImage Cimage">
+                            <img src="http://placehold.it/40X40" alt="userImage">
+                        </a> 
+                        <textarea placeholder="Add A Comment"></textarea>
+                        <div class="commentButton">
+                            <input type="button" class="btn btn-primary" value="Post Comment" />
+                        </div>
+                    </div>
+                <!-- comment box ends here -->
+                    
+                </div>
+                <!-- class activity ends here -->
+                   
+                </div>
+                <!-- fullscreenComment ends here -->
+            </div>
+        </div>
+        <!-- upper image ends here -->
+      
+        <div class="container">
+            <div class="row-fluid feed">
+                <div class="profileImage">
+                    <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/60X60" alt="userImage">
+                    </a>
+                </div> 
+                
+                <div class="activity">
+                    <div class="activityby"><h5>Balraj Parmar</h5><h6>Added a new Video Two Days Ago</h6><div class="clearfix"></div></div>
+                    <div class="videotitle"><h6>Video Title</h6></div>
+                    <div class="feedElement">
+                        <a href="#" class="thumbnail">
+                            <img src="http://placehold.it/300X200" alt="userImage">
+                        </a>
+                    </div>
+                    <div class="socialevent">
+                        <a href="#"><h6>like</h6></a>
+                        <a href="#"><h6>comment<span class="badge badge-info">8</span></h6></a>
+                        <a href="#"><h6>share</h6></a>
+                    </div>
+                    <div class="commentHoler">
+                        <div class="comment">
+                            <a href="#" class="thumbnail commentImage">
+                                <img src="http://placehold.it/40X40" alt="userImage">
+                            </a>
+                            
+                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                                <h5>
+                                    This is a very nice Video :)
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                </h5>
+                            </div>
+                            <div class="timeofcommentAndLike">
+                                <h6><a href="#">1 Minute Ago</a></h6>
+                                <h6><a href="#">Like</a></h6>
+                            </div>
+                        </div>
+                        <!-- class comment ends here -->
+                        <div class="comment">
+                            <a href="#" class="thumbnail commentImage">
+                                <img src="http://placehold.it/40X40" alt="userImage">
+                            </a>
+                            
+                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                                <h5>
+                                    This is a nice Video :)
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
+                                </h5>
+                            </div>
+                            <div class="timeofcommentAndLike">
+                                <h6><a href="#">1 Minute Ago</a></h6>
+                                <h6><a href="#">Like</a></h6>
+                            </div>
+                        </div>
+                        <!-- class comment ends here -->
+                        <div class="comment">
+                            <a href="#" class="thumbnail commentImage">
+                                <img src="http://placehold.it/40X40" alt="userImage">
+                            </a>
+                            
+                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                                <h5>
+                                    This is a nice Video :)
+                                    Lorem Ipsum is simply dummy text.  
+                                </h5>
+                            </div>
+                            <div class="timeofcommentAndLike">
+                                <h6><a href="#">1 Minute Ago</a></h6>
+                                <h6><a href="#">Like</a></h6>
+                            </div>
+                        </div>
+                        <!-- class comment ends here -->
+                        <div class="clearfix"></div>
+                   </div> <!-- commentHoler ends here -->
+                    
+                    
+                     <div class="commentBox">
+                        <a href="#" class="thumbnail commentImage Cimage">
+                            <img src="http://placehold.it/40X40" alt="userImage">
+                        </a> 
+                        <textarea placeholder="Add A Comment"></textarea>
+                        <div class="commentButton">
+                            <input type="button" class="btn btn-primary" value="Post Comment" />
+                            <input type="button" class="btn cancelButton" value="Cancel" />
+                        </div>
+                    </div>
+                <!-- comment box ends here -->
+                
+
+                </div>
+                <!-- class activity ends here -->
+                <div class="clearfix"></div>
+            </div>    
+                <!-- class feed ends here -->
+
+
+
+
+
+<!-- 2nd feed starts here -->
+
+            <div class="row-fluid feed">
+                <div class="profileImage">
+                    <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/60X60" alt="userImage">
+                    </a>
+                </div> 
+                
+                <div class="activity">
+                    <div class="activityby"><h5>Balraj Parmar</h5><h6>Added a new Video Two Days Ago</h6><div class="clearfix"></div></div>
+                    <div class="videotitle"><h6>Video Title</h6></div>
+                    <div class="feedElement">
+                      <div class="row-fluid">
+                        <div class="span4"><a href="#" class="thumbnail"><img src="http://placehold.it/300X200" alt="userImage"></a></div> 
+                        <div class="span4"><a href="#" class="thumbnail"><img src="http://placehold.it/300X200" alt="userImage"></a></div> 
+                        <div class="span4"><a href="#" class="thumbnail"><img src="http://placehold.it/300X200" alt="userImage"></a></div>
+                      </div> 
+                    </div>
+                    <div class="socialevent">
+                        <a href="#"><h6>like</h6></a>
+                        <a href="#"><h6>comment<span class="badge badge-info">8</span></h6></a>
+                        <a href="#"><h6>share</h6></a>
+                    </div>
+                    <div class="commentHoler">
+                        <div class="comment">
+                            <a href="#" class="thumbnail commentImage">
+                                <img src="http://placehold.it/40X40" alt="userImage">
+                            </a>
+                            
+                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                                <h5>
+                                    This is a nice Video :)
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                </h5>
+                            </div>
+                            <div class="timeofcommentAndLike">
+                                <h6><a href="#">1 Minute Ago</a></h6>
+                                <h6><a href="#">Like</a></h6>
+                            </div>
+                        </div>
+                        <!-- class comment ends here -->
+                        <div class="comment">
+                            <a href="#" class="thumbnail commentImage">
+                                <img src="http://placehold.it/40X40" alt="userImage">
+                            </a>
+                            
+                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                                <h5>
+                                    This is a nice Video :)
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
+                                </h5>
+                            </div>
+                            <div class="timeofcommentAndLike">
+                                <h6><a href="#">1 Minute Ago</a></h6>
+                                <h6><a href="#">Like</a></h6>
+                            </div>
+                        </div>
+                        <!-- class comment ends here -->
+                        <div class="comment">
+                            <a href="#" class="thumbnail commentImage">
+                                <img src="http://placehold.it/40X40" alt="userImage">
+                            </a>
+                            
+                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
+                                <h5>
+                                    This is a nice Video :)
+                                    Lorem Ipsum is simply dummy text.  
+                                </h5>
+                            </div>
+                            <div class="timeofcommentAndLike">
+                                <h6><a href="#">1 Minute Ago</a></h6>
+                                <h6><a href="#">Like</a></h6>
+                            </div>
+                        </div>
+                        <!-- class comment ends here -->
+                        <div class="clearfix"></div>
+                   </div> <!-- commentHoler ends here -->
+                    
+                    
+                     <div class="commentBox">
+                        <a href="#" class="thumbnail commentImage Cimage">
+                            <img src="http://placehold.it/40X40" alt="userImage">
+                        </a> 
+                        <textarea placeholder="Add A Comment"></textarea>
+                        <div class="commentButton">
+                            <input type="button" class="btn btn-primary" value="Post Comment" />
+                            <input type="button" class="btn cancelButton" value="Cancel" />
+                        </div>
+                    </div>
+                <!-- comment box ends here -->
+                
+
+                </div>
+                <!-- class activity ends here -->
+                <div class="clearfix"></div>
+            </div>    
+                <!-- class feed ends here -->
+
+
+
+
+
+
+        </div>
+        <!-- class container ends here -->
+  </body>
+  
+</html>
