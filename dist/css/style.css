@@ -1,0 +1,307 @@
+/* --------------------------------------------------------
+Custom Style Sheet for DadaJoe.com- Community feed
+
+version: 1.0
+last modified: 05.12.2013 by Put your name if modifying
+author: Dipanjan Bagchi
+email: dipa@vyrazu.com
+website: http://www.vyrazu.com
+----------------------------------------------------------*/
+
+/* bootstrap overridded css */
+.thumbnail {
+  border: 1px solid #fff;  
+  display: inline-block;
+  background: #ffffff;
+}
+.videoThumbnail {
+	border: 5px solid #fff;
+	display: inline-block;
+	background: #ffffff;
+	border-radius: 6px;
+}
+body {
+    #FBFBFB;
+}
+
+.container {
+    font-family: 'PT Sans', sans-serif;
+}
+.feed {
+    border-left: 1px solid #e5e5e5;
+    padding: 30px 0 0 0;
+    
+}
+.container:before {
+    height: 10px;
+    width: 10px;
+    left: -6px;
+    position: relative;
+    content: url("../img/clock.png");
+    color: #d8d8d8;
+    font-size: 20px;
+}
+
+.userImage {
+    float: left;
+    display: inline-block;
+}
+.profileImage {
+    left: -30px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-top: 70px;
+}
+.activity {
+    background: #f7f7f7;
+    float: left;
+    border: 1px solid #d8d8d8;
+    border-bottom-width: 2px;
+    border-radius: 10px;
+    width: 70%;
+    padding-bottom: 10px;
+    margin-top: 70px;
+    margin-bottom: 5px;
+}
+.activity:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 10px;
+    border-color: transparent #d8d8d8 transparent transparent;
+    margin-left: 25px;
+    position: relative;
+    left: -46px;
+    top: 13px;
+}
+.activityby {
+	margin-left: 1%;
+}
+.activityby h5 {
+    float: left;
+    margin-right: 10px;
+}
+.activityby h6 {
+    float: left;
+}
+.videotitle {
+    float: left;
+    width: 100%;
+    margin-left: 1%;
+}
+.feedElement {
+    padding: 20px;
+    float: left;
+}
+.socialevent {
+    width: 96%;
+    float: left;
+    padding: 2%;
+}
+.socialevent a h6 {
+    float: left;
+    display: block;
+}
+.socialevent a h6 span {
+    margin: 5px;
+}
+
+
+.comment {
+    width: 98%;
+	float: left;
+	margin-top: 0px;
+	border-top: 1px solid #e5e5e5;
+	padding: 1%;
+	background: #DEE5F4;
+	border-radius: 3px;
+}
+h6 {
+    text-transform: none;
+}
+.commentImage {
+    display: inline-block;
+    padding: 2px;
+    float: left;
+    max-width: 20%
+}
+
+.comment .nameAndComment {
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 70%;
+}
+.nameAndComment h5 {
+    font-weight: normal;
+}
+
+.comment .commentGiven {
+    float: left;
+}
+
+.comment .timeofcommentAndLike {
+    float: left;
+    margin-right: 20px;  
+    width: 60%;
+    margin-top: 10px;  
+    font-weight: normal;
+}
+
+.timeofcommentAndLike h6{
+    float: left;
+    display: block;
+    margin-right: 20px;
+}
+
+.dummyBox {
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    padding: 2px;
+    float: left;
+    max-width: 20%;
+    display: none;
+}
+.Cimage {
+    display: none;
+}
+.commentBox {
+	background: #f7f7f7;
+	width: 90%;
+	float: left;
+	border: 1px solid #d8d8d8;
+	border-bottom-width: 0px;
+	border-top: 1px solid #e5e5e5;
+	margin-top: 0px; /*intially it was 9px */
+	padding-top: 10px;
+	border-left-width: 0px;
+	margin-left: 10%;
+ }
+.commentBox textarea {
+    width: 60%;
+    float: left;
+    margin-left: 2%;
+    height: 20px;
+    resize: none;
+}
+.commentBoxEnlarge {
+    width: 80%;
+    margin-top: 14px;
+    float: left;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 48px;
+}
+.commentBoxEnlarge textarea {
+    width: 60%;
+    float: left;
+    margin-left: 20px;
+    height: 20px;
+}
+.commentButton {
+    width: 85%;
+	float: left;
+	margin-left: 15%;
+	display: none;
+}
+
+.commentButton input[type="button"] {
+    float: left;
+    margin-right: 2%;
+}
+
+.upperImage {
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    z-index: 999;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.fullscreen {
+	display: table-cell;
+	height: 500px;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 4px;
+	text-align: center;
+	vertical-align: middle;
+	max-height: 500px;
+	min-height: 300px;
+}
+.fullscreen img {
+    margin: 0 auto;
+}
+.picAndCommentHolder {
+	background: aliceblue;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 90%;
+	height: 70%;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.fullscreenComment {
+    margin-left: 0px;
+}
+.activityEnlarge {
+    background: #f7f7f7;
+    padding: 10px;
+    float: left;
+    border: 1px solid #d8d8d8;
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    width: 70%;
+    padding-bottom: 0px;
+    min-width: 250px;
+}
+.cut {
+    display: block;
+}
+.imageHolder {
+    width: 100%;
+    float: left;
+    display: inline-table;
+}
+.commentHoler {
+}
+
+	.feedElement [class*="span"] img{
+		max-height: 300px;
+	}
+	.feedElement [class*="span12"] {
+		margin: 1%;
+		
+	}
+
+/* media queries defined by Vyrazu Labs */
+@media (max-width: 767px) {
+	.feedElement [class*="span"] {
+		width: 30%;
+		display: inline-block;
+		margin: 1%;
+	}
+	.feedElement [class*="span12"] {
+		width: 30%;
+		display: inline-block;
+		margin: 1%;
+		float: left;	
+	}
+	.fullscreen {
+		height: auto;
+	}
+
+}

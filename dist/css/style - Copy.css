@@ -1,0 +1,169 @@
+/* --------------------------------------------------------
+Custom Style Sheet for DadaJoe.com- Community feed
+
+version: 1.0
+last modified: 05.12.2013 by Put your name if modifying
+author: Dipanjan Bagchi
+email: dipa@vyrazu.com
+website: http://www.vyrazu.com
+----------------------------------------------------------*/
+
+body {
+    #FBFBFB;
+}
+
+.container {
+    font-family: 'PT Sans', sans-serif;
+}
+.feed {
+    border-left: 1px solid #e5e5e5;
+    padding: 30px 0 0 0;
+    
+}
+.feed:before {
+    height: 10px;
+    width: 10px;
+    top: -31px;
+    left: -3px;
+    position: relative;
+    content:"D";
+    color: #d8d8d8;
+    font-size: 20px;
+}
+.userImage {
+    float: left;
+    display: inline-block;
+}
+.profileImage {
+    left: -30px;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+.activity {
+    background: #f7f7f7;
+    padding: 10px;
+    float: left;
+    border: 1px solid #d8d8d8;
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    width: 70%;
+    padding-bottom: 0px;
+}
+.activity:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 10px;
+    border-color: transparent #d8d8d8 transparent transparent;
+    margin-left: 15px;
+    position: relative;
+    left: -46px;
+    top: 13px;
+}
+.activityby h5 {
+    float: left;
+    margin-right: 10px;
+}
+.activityby h6 {
+    float: left;
+}
+.videotitle {
+    float: left;
+    width: 100%;
+}
+.feedElement {
+    padding: 20px;
+    float: left;
+}
+.socialevent {
+    width: 100%;
+    float: left;
+}
+.socialevent a h6 {
+    margin-right: 10px;
+    float: left;
+    display: block;
+}
+
+
+.comment {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 5px;
+}
+.commentImage {
+    display: inline-block;
+    padding: 2px;
+    float: left;
+    max-width: 20%
+}
+
+.comment .nameAndComment {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60%;
+}
+
+.comment .commentGiven {
+    float: left;
+}
+
+.comment .timeofcommentAndLike {
+    float: left;
+    margin-left: 60px;
+    margin-right: 20px;  
+    width: 60%;
+    margin-top: 10px;  
+}
+
+.timeofcommentAndLike h6{
+    float: left;
+    display: block;
+    margin-right: 20px;
+}
+
+.dummyBox {
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    padding: 2px;
+    float: left;
+    max-width: 20%
+}
+.Cimage {
+    display: none;
+}
+.commentBox {
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.commentBox textarea {
+    width: 60%;
+    border-radius: 0px;
+    float: left;
+    margin-left: 20px;
+    height: 20px;
+}
+
+
+.commentButton {
+    width: 100%;
+    float: left;
+    margin-left: 66px;
+    display: none;
+}
+
+.commentButton input[type="button"] {
+    float: left;
+    margin-right: 20px;
+}
+

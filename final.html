@@ -30,7 +30,7 @@
    <!-- site specific styling -->
    <style type="text/css">
    
-   .flowplayer { width: 100%; }
+   .flowplayer { width: 100%;}
    </style>
 
 
@@ -123,7 +123,7 @@
               var imageContainer = $('.picAndCommentHolder .span8 .imageHolder');
               imageContainer.html(
               	'<a href="#" class="fullscreen">'+
-                    '<img src="http://placehold.it/600X600" alt="userImage">'+
+                    '<img class="thumbnail" src="http://placehold.it/600X600" alt="userImage">'+
                  '</a>'
 				);
           });
@@ -139,12 +139,14 @@
 			    document.documentElement.firstChild.appendChild( newnote );
           		
           		videoContainer.html(
+          			'<div class="fullscreen">'+
           			'<div class="flowplayer" data-swf="flowplayer.swf" data-ratio="0.4167">'+
 	          			'<video>'+
 		          			'<source type="video/webm" src="http://stream.flowplayer.org/bauhaus/624x260.webm">'+
 		          			'<source type="video/mp4" src="http://stream.flowplayer.org/bauhaus/624x260.mp4">'+
 		          			'<source type="video/mp4" src="http://stream.flowplayer.org/bauhaus/624x260.mp4">'+
 	          			'<video>'+
+	          		'</div>'+
 	          		'</div>');
           		
 
@@ -167,7 +169,7 @@
                 <div class="span8" style="margin-left:6%; width: 60%;">
                     <div class="imageHolder">
                     	<a href="#" class="fullscreen">
-                    		<img src="http://placehold.it/600X600" alt="userImage">
+                    		<img class="thumbnail" src="http://placehold.it/600X600" alt="userImage">
                     	</a>
                     </div>
                 </div>
