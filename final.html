@@ -20,6 +20,27 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic' rel='stylesheet' type='text/css'>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    
+    <!-- player css and js added here -->
+    
+       <!-- player skin -->
+   <link rel="stylesheet" type="text/css" href="skin/minimalist.css">
+
+   <!-- site specific styling -->
+   <style type="text/css">
+   
+   .flowplayer { width: 100%; }
+   </style>
+
+
+   <!-- include flowplayer -->
+   <script type="text/javascript" src="flowplayer.min.js"></script>
+
+
+    
+    
+    <!-- player css and js added ends here -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -99,18 +120,56 @@
           
           $('.cut').click(function(){
               $('.upperImage').css({'display':'none',}); 
+              var imageContainer = $('.picAndCommentHolder .span8 .imageHolder');
+              imageContainer.html(
+              	'<a href="#" class="fullscreen">'+
+                    '<img src="http://placehold.it/600X600" alt="userImage">'+
+                 '</a>'
+				);
           });
+          
+          $('.videoThumbnail img').click(function(){
+          	
+          		$('.upperImage').css({'display':'block',}); 
+          		var videoContainer = $('.upperImage .picAndCommentHolder .span8 .imageHolder');
+          		
+          		var newnote = document.createElement('script');
+			    newnote.src = "flowplayer.min.js";
+			    newnote.type = "text/javascript";
+			    document.documentElement.firstChild.appendChild( newnote );
+          		
+          		videoContainer.html(
+          			'<div class="flowplayer" data-swf="flowplayer.swf" data-ratio="0.4167">'+
+	          			'<video>'+
+		          			'<source type="video/webm" src="http://stream.flowplayer.org/bauhaus/624x260.webm">'+
+		          			'<source type="video/mp4" src="http://stream.flowplayer.org/bauhaus/624x260.mp4">'+
+		          			'<source type="video/mp4" src="http://stream.flowplayer.org/bauhaus/624x260.mp4">'+
+	          			'<video>'+
+	          		'</div>');
+          		
+
+          });
+          
    
       });
   </script>
 
 </head>
 
+
+
+
 <body>
+	
+
 	    <div class="upperImage">
             <div class="row-fluid picAndCommentHolder">
-                <div class="span8" style="width: 60%;  margin-left: 5%;">
-                    <div class="imageHolder"><a href="#" class="fullscreen"><img src="http://placehold.it/600X600" alt="userImage"></a></div>
+                <div class="span8" style="margin-left:6%; width: 60%;">
+                    <div class="imageHolder">
+                    	<a href="#" class="fullscreen">
+                    		<img src="http://placehold.it/600X600" alt="userImage">
+                    	</a>
+                    </div>
                 </div>
                 <!-- fullscreenComment ends here -->
                 <div class="span4 fullscreenComment pull-right" style="margin-left: 0px;">
@@ -188,6 +247,7 @@
                    
                 </div>
                 <!-- fullscreenComment ends here -->
+                <div class="clearfix"></div> 
             </div>
         </div>
         <!-- upper image ends here -->
@@ -206,14 +266,14 @@
                     <div class="activityby"><h5>Balraj Parmar</h5><h6>Added a new Video Two Days Ago</h6><div class="clearfix"></div></div>
                     <div class="videotitle"><h6>Video Title</h6></div>
                     <div class="feedElement">
-                        <a href="#" class="thumbnail">
+                        <a href="#" class="videoThumbnail">
                             <img src="http://placehold.it/300X200" alt="userImage">
                         </a>
                     </div>
                     <div class="socialevent">
-                        <a href="#"><h6>like<span class="badge badge-info">8</span></h6></a>
-                        <a href="#"><h6>comment<span class="badge badge-info">8</span></h6></a>
-                        <a href="#"><h6>share<span class="badge badge-info">8</span></h6></a>
+                        <a href="#"><h6>like <i class="icon-thumbs-up"></i><span class="badge badge-info">8</span></h6></a>
+                        <a href="#"><h6>comment <i class="icon-edit"></i><span class="badge badge-info">8</span></h6></a>
+                        <a href="#"><h6>share <i class="icon-share"></i><span class="badge badge-info">8</span></h6></a>
                     </div>
                     <div class="commentHoler">
                         <div class="comment">
@@ -227,8 +287,8 @@
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                 </h5>
 	                            <div class="timeofcommentAndLike">
-	                                <h6><a href="#">1 Minute Ago</a></h6>
-	                                <h6><a href="#">Like</a></h6>
+	                                <h6><a href="#">1 Minute Ago <i class="icon-time"></i></a></h6>
+	                                <h6><a href="#">Like<i class="icon-thumbs-up"></i></a></h6>
 	                            </div>                           
                             </div>
                         </div>
@@ -244,8 +304,8 @@
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
                                 </h5>
 	                            <div class="timeofcommentAndLike">
-	                                <h6><a href="#">1 Minute Ago</a></h6>
-	                                <h6><a href="#">Like</a></h6>
+	                                <h6><a href="#">1 Minute Ago <i class="icon-time"></i></a></h6>
+	                                <h6><a href="#">Like<i class="icon-thumbs-up"></i></a></h6>
 	                            </div>
                             </div>
                        </div>
@@ -261,8 +321,8 @@
                                     Lorem Ipsum is simply dummy text.  
                                 </h5>
 	                            <div class="timeofcommentAndLike">
-	                                <h6><a href="#">1 Minute Ago</a></h6>
-	                                <h6><a href="#">Like</a></h6>
+	                                <h6><a href="#">1 Minute Ago <i class="icon-time"></i></a></h6>
+	                                <h6><a href="#">Like<i class="icon-thumbs-up"></i></a></h6>
 	                            </div>
                             </div>
                         </div>
