@@ -39,6 +39,31 @@
    <script type="text/javascript" src="flowplayer.min.js"></script>
 
 
+    <!-- custom scroll bar work -->
+    
+    <link href="dist/css/general.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="dist/js/jquery.ui.touch-punch.min.js"></script>
+	
+	<script type="text/javascript" src="dist/js/facescroll.js">
+	/***********************************************
+	* FaceScroll custom scrollbar (c) Dynamic Drive (www.dynamicdrive.com)
+	* This notice MUST stay intact for legal use
+	* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+	***********************************************/
+	</script>
+	
+	<script type="text/javascript">
+		jQuery(function(){ // on page DOM load
+			
+			$('#picCommentHolder').alternateScroll();
+			$('#demo2').alternateScroll({ 'vertical-bar-class': 'styled-v-bar', 'hide-bars': false });	
+		})
+	</script>
+    
+    <!-- custom scroll bar ends here -->
+    
     
     
     <!-- player css and js added ends here -->
@@ -164,6 +189,7 @@
 				 */ 
 				          	
           		$('.commentHoler').css({'overflow-y':'scroll'});
+          		$('#commentsScroll').alternateScroll();
           		
           });
           
@@ -180,7 +206,7 @@
 	
 
 	    <div class="upperImage">
-            <div class="row-fluid picAndCommentHolder">
+            <div class="row-fluid picAndCommentHolder" id="picCommentHolder">
                 <div class="span8" style="margin-left:6%; width: 60%;">
                     <div class="imageHolder">
                     	<a href="#" class="fullscreen">
@@ -315,7 +341,7 @@
                         <a href="#"><h6><i class="icon-edit"></i>comment<span class="badge badge-info">8</span></h6></a>
                         <a href="#"><h6><i class="icon-share"></i> share<span class="badge badge-info">8</span></h6></a>
                     </div>
-                    <div class="commentHoler">
+                    <div class="commentHoler" id="commentsScroll">
                         <div class="comment">
                             <a href="#" class="thumbnail commentImage">
                                 <img src="http://placehold.it/40X40" alt="userImage">
