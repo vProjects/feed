@@ -153,20 +153,6 @@
 
           });
           
-          
-          //added codes for the view more comments
-          $('.viewMore').click(function(){
-          	
-				/* before making this call please call the other comments using the Ajax or you can also just
-				 * call the comments earlier and then just show it over here and in the last just call this css change.
-				 * There is a way by which you can control to limit the number of comments by just making the limit in the 
-				 * no of loop iterations by which you can control the limit on no of comments. 
-				 */ 
-				          	
-          		$('.commentHoler').css({'overflow-y':'scroll'});
-          		
-          });
-          
    
       });
   </script>
@@ -367,47 +353,7 @@
                             </div>
                         </div>
                         <!-- class comment ends here -->
-                        <div class="comment">
-                            <a href="#" class="thumbnail commentImage">
-                                <img src="http://placehold.it/40X40" alt="userImage">
-                            </a>
-                            
-                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
-                                <h5>
-                                    This is a nice Video :)
-                                    Lorem Ipsum is simply dummy text.  
-                                </h5>
-	                            <div class="timeofcommentAndLike">
-	                                <h6><a href="#">1 Minute Ago <i class="icon-time"></i></a></h6>
-	                                <h6><a href="#">Like<i class="icon-thumbs-up"></i></a></h6>
-	                            </div>
-                            </div>
-                        </div>
-                        <!-- class comment ends here -->
-                        <div class="comment">
-                            <a href="#" class="thumbnail commentImage">
-                                <img src="http://placehold.it/40X40" alt="userImage">
-                            </a>
-                            
-                            <div class="nameAndComment"><h5><a href="#">Balraj Parmar</a></h5>
-                                <h5>
-                                    This is a nice Video :)
-                                    Lorem Ipsum is simply dummy text.  
-                                </h5>
-	                            <div class="timeofcommentAndLike">
-	                                <h6><a href="#">1 Minute Ago <i class="icon-time"></i></a></h6>
-	                                <h6><a href="#">Like<i class="icon-thumbs-up"></i></a></h6>
-	                            </div>
-                            </div>
-                        </div>
-                        <!-- class comment ends here -->
 
-                <div class="clearfix"></div>                        
-                   </div> <!-- commentHoler ends here -->
-                    <div class="socialevent">
-                        <h6 class="viewMore"><i class="icon-comment"></i> View More Comment <span class="badge badge-info">8</span></h6>
-                    </div>
-                   
                      <div class="commentBox">
                         <a href="#" class="thumbnail commentImage Cimage">
                             <img src="http://placehold.it/40X40" alt="userImage">
@@ -419,7 +365,9 @@
                         </div>
                     </div>
                 <!-- comment box ends here -->
-                        
+                 <div class="clearfix"></div>                        
+                   </div> <!-- commentHoler ends here -->
+                       
                 </div>
                 <!-- class activity ends here -->
              
